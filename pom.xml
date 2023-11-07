@@ -3,13 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.demo</groupId>
-	<artifactId>jakarta10-JSF-starter</artifactId>
+	<artifactId>poeDemoJsf</artifactId>
 	<version>0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>jakarta10-JSF-starter</name>
+	<name>poeDemoJsf</name>
 	<description>
-		Empty Jakarta EE 10 application configured for JSF + CDI
+		poeDemoJsf
 	</description>
 
 	<properties>
@@ -80,6 +80,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>jakarta10-JSF-starter</finalName>
+		<finalName>poeDemoJsf</finalName>
 	</build>
 </project>
