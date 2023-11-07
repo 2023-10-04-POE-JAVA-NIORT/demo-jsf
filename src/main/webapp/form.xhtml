@@ -10,7 +10,8 @@
         <h:panelGrid columns="3">
             <h:outputLabel for="username" value="Nom d'utilisateur:" />
             <h:inputText id="username" value="#{formValidationBean.username}"
-                         validatorMessage="doit être compris entre 5 et 10 caractères">
+                         validatorMessage="doit être compris entre 5 et 10 caractères"
+                         required="true" requiredMessage="Champ obligatoire">
                 <f:validateLength minimum="5" maximum="10"/>
             </h:inputText>
             <h:message for="username" />
@@ -19,6 +20,7 @@
             <h:inputText id="email" value="#{formValidationBean.email}"
                          validatorMessage="doit contenir une email valide">
                 <f:validateRegex pattern="^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,6}$"/>
+                <f:validateRequired />
             </h:inputText>
             <h:message for="email" />
 
