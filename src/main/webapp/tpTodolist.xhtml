@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title>Todolist</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:outputLabel for="newTask" value="Nouvelle tache:" />
+        <h:inputText id="newTask" value="#{nouvelleTache.tache}"/>
+        <h:message for="newTask"></h:message>
+
+        <h:commandButton value="Ajouter" action="#{listeTaches.enregistrerNouvelleTache(nouvelleTache.tache)}" />
+    </h:form>
+
+    <ul>
+        <ui:repeat value="#{listeTaches.taches}" var="tache">
+            <li>#{tache}</li>
+        </ui:repeat>
+    </ul>
+
+</h:body>
+</html>
