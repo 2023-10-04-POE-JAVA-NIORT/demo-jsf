@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+    <title>Confirmation de soumission</title>
+</h:head>
+
+<h:body>
+    <h2>Confirmation</h2>
+    <p>Merci pour votre commentaire !</p>
+
+    <h:panelGroup rendered="#{not empty textareaBean.comment}">
+        <h:outputLabel value="Vous avez écrit:" />
+        <h:outputText value="#{textareaBean.comment}" escape="false" />
+    </h:panelGroup>
+
+    <h:panelGroup rendered="#{empty textareaBean.comment}">
+        <p>Aucun commentaire n'a été fourni.</p>
+    </h:panelGroup>
+
+    <h:button value="Retour au formulaire" outcome="textareaDemo.xhtml" />
+</h:body>
+</html>
