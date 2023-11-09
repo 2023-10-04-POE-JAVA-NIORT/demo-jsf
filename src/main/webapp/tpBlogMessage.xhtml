@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Blog</title>
+</h:head>
+<h:body>
+
+    <f:metadata>
+        <f:viewParam name="id" value="#{queryParamBean.id}"/>
+    </f:metadata>
+
+    <h:outputText value="#{blog.getMessageById(queryParamBean.id).titre}"/>
+    <br/>
+    <h:outputText value="#{blog.getMessageById(queryParamBean.id).contenu}"/>
+</h:body>
+</html>

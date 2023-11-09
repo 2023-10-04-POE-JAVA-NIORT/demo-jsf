@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title>Blog</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:panelGrid columns="3">
+            <h:outputLabel for="titre" value="Titre:" />
+            <h:inputText id="titre" value="#{formMessageBean.titre}"/>
+            <h:message for="titre" />
+
+            <h:outputLabel for="contenu" value="Contenu:" />
+            <h:inputText id="contenu" value="#{formMessageBean.contenu}"/>
+            <h:message for="contenu" />
+
+        </h:panelGrid>
+
+        <h:commandButton value="Valider" action="#{blog.addMessage(formMessageBean.titre, formMessageBean.contenu)}" />
+    </h:form>
+
+</h:body>
+</html>
